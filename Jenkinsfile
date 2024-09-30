@@ -18,7 +18,7 @@ pipeline {
                     emailext(
                         subject: "Jenkins: Tests Passed",
                         body: "The Unit and Integration Tests have passed.",
-                        recipientProviders: [[$class: 'DevelopersRecipientProvider']],
+                        recipientProviders: [[$class: 'krishnahkhengar007@gmail.com']],
                         attachLog: true
                     )
                 }
@@ -26,7 +26,7 @@ pipeline {
                     emailext(
                         subject: "Jenkins: Tests Failed",
                         body: "The Unit and Integration Tests have failed.",
-                        recipientProviders: [[$class: 'DevelopersRecipientProvider']],
+                        recipientProviders: [[$class: 'krishnahkhengar007@gmail.com']],
                         attachLog: true
                     )
                 }
@@ -48,7 +48,7 @@ pipeline {
                     emailext(
                         subject: "Jenkins: Security Scan Passed",
                         body: "The security scan has passed with no vulnerabilities found.",
-                        recipientProviders: [[$class: 'DevelopersRecipientProvider']],
+                        recipientProviders: [[$class: 'krishnahkhengar007@gmail.com']],
                         attachLog: true
                     )
                 }
@@ -56,7 +56,7 @@ pipeline {
                     emailext(
                         subject: "Jenkins: Security Scan Failed",
                         body: "The security scan has failed. Please review the logs for vulnerabilities.",
-                        recipientProviders: [[$class: 'DevelopersRecipientProvider']],
+                        recipientProviders: [[$class: 'krishnahkhengar007@gmail.com']],
                         attachLog: true
                     )
                 }
