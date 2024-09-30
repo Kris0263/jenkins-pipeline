@@ -16,19 +16,21 @@ pipeline {
             post {
                 success {
                     emailext(
-                        subject: "Jenkins: Tests Passed",
-                        body: "The Unit and Integration Tests have passed.",
-                        recipientProviders: [[$class: 'krishnahkhengar007@gmail.com']],
-                        attachLog: true
-                    )
+  subject: 'Jenkins: Tests Passed',
+  body: 'The Unit and Integration Tests have passed.',
+  to: 'krishnahkhengar007@gmail.com',
+  attachLog: true
+)
+
                 }
                 failure {
                     emailext(
-                        subject: "Jenkins: Tests Failed",
-                        body: "The Unit and Integration Tests have failed.",
-                        recipientProviders: [[$class: 'krishnahkhengar007@gmail.com']],
-                        attachLog: true
-                    )
+  subject: 'Jenkins: Tests Passed',
+  body: 'The Unit and Integration Tests have passed.',
+  to: 'krishnahkhengar007@gmail.com',
+  attachLog: true
+ )
+
                 }
             }
         }
@@ -45,20 +47,22 @@ pipeline {
             }
             post {
                 success {
-                    emailext(
-                        subject: "Jenkins: Security Scan Passed",
-                        body: "The security scan has passed with no vulnerabilities found.",
-                        recipientProviders: [[$class: 'krishnahkhengar007@gmail.com']],
-                        attachLog: true
-                    )
+                   emailext(
+  subject: 'Jenkins: Tests Passed',
+  body: 'The Unit and Integration Tests have passed.',
+  to: 'krishnahkhengar007@gmail.com',
+  attachLog: true
+)
+
                 }
                 failure {
                     emailext(
-                        subject: "Jenkins: Security Scan Failed",
-                        body: "The security scan has failed. Please review the logs for vulnerabilities.",
-                        recipientProviders: [[$class: 'krishnahkhengar007@gmail.com']],
-                        attachLog: true
-                    )
+  subject: 'Jenkins: Tests Passed',
+  body: 'The Unit and Integration Tests have passed.',
+  to: 'krishnahkhengar007@gmail.com',
+  attachLog: true
+)
+
                 }
             }
         }
